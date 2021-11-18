@@ -1,0 +1,321 @@
+@import url(reset.css);
+
+@import "variables.scss";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../img/background.jpg);
+}
+
+// header
+.header {
+    background-color: $color-third;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    color: $color-fifth;
+    text-shadow: 1px 1px 1px rgb(33, 33, 33);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header__img {
+    width: 10vmax;
+    height: 7vmax;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item-link {
+    padding: 1rem;
+    color: $color-fifth;
+    text-shadow: 1px 1px 1px rgb(33, 33, 33);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.menu__item-link:hover {
+    color: $color-second;
+    border-bottom: .2rem solid $color-second;
+    padding-bottom: .5rem;
+}
+
+.container {
+    padding: 1%;
+}
+
+// form
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../img/fon.jpeg);
+}
+
+.wrapper__heading {
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    margin: 10%;
+}
+
+.form {
+    max-width: 350px;
+    padding:  30px 30px;
+    margin: 10% auto 30px;
+    background: $color-third;
+    border-radius: 10px;
+
+    .form__heading {
+        position: relative;
+        z-index: 5;
+        margin: 0 0 60px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: normal;
+        background-color: $color-sixth;
+        border-radius: 5px;
+        color: $color-fourth;
+        text-shadow: 1px 1px 1px rgb(33, 33, 33);
+    }
+
+    .form__row {
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    .form__row input {
+        display: block;
+        width: 100%;
+        padding: 0 10px;
+        line-height: 40px;
+        background: none;
+        border-width: 0;
+        border-bottom: 2px solid $color-sixth;
+        transition: all 0.2s ease;
+    }
+
+    .form__row label {
+        position: absolute;
+        left: 13px;
+        color: $color-sixth;
+        font-size: 20px;
+        font-weight: 300;
+        transform: translateY(-35px);
+        transition: all 0.2s ease;
+    }
+
+    .form__row input:focus {
+        outline: 0;
+        border-color: $color-fifth;
+    }
+
+    .form__row input:focus+label, .form-row input:valid+label {
+        transform: translateY(-60px);
+        margin-left: -14px;
+        font-size: 14px;
+        font-weight: 400;
+        outline: 0;
+        border-color: $color-fifth;
+        color: $color-fifth;
+    }
+}
+
+.form input[type="submit"] {
+    width: 100%;
+    padding: 0;
+    line-height: 42px;
+    background: $color-sixth;
+    border-width: 0;
+    color: $color-fourth;
+    font-size: 20px;
+}
+
+.form .paragraph {
+    margin: 0;
+    padding-top: 10px;
+}
+
+// comment
+.reviews__item-first,
+.reviews__item-second,
+.reviews__item-third {
+    float: left;
+    border-radius: 15%;
+}
+
+
+.menu__name {
+    text-align: center;
+    font-size: 25px;
+}
+
+.reviews__item-first,
+.reviews__item-second,
+.reviews__item-third {
+    width: 30%;
+    background: $color-fourth;
+    padding: 30px;
+    margin: 20px;
+    box-shadow: .1rem .1rem .1rem .1rem $color-first;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.name__client {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.stars {
+    color: $color-seventh;
+    margin-bottom: 20px;
+}
+
+.link__item {
+    margin-left: 70%;
+    text-decoration: none;
+}
+
+// footer
+.footer {
+    background-color: $color-third;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    width: 100%;
+
+    .footer__items {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2%;
+
+        .footer__items-link {
+        text-decoration: none;
+        color: $color-first;
+        font-size: 1rem;
+
+            .footer__items-img {
+            width: 50px;
+            height: 50px;
+            }
+        }
+        
+        .footer__items-text {
+        margin-left: 5%;
+        }
+
+        .footer__post-item {
+        font-size: 1rem;
+        }
+
+        .footer__items-post {
+        height: 50px;
+        width: 80px;
+        }
+    }
+
+    .map {
+        width: 90%;
+        height: 200px;
+        margin-left: 5%;
+        border: 5px solid $color-first;
+        border-radius: 7px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+
+    .menu__list {
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .menu__item {
+        margin: 1% 0;
+    }
+
+    .menu__item-link {
+        padding: 3% 0;
+    }
+
+    .menu__item-link:hover {
+        border-bottom: none;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .wrapper__heading {
+        text-align: center;
+    }
+
+    .reviews__item-first,
+    .reviews__item-second,
+    .reviews__item-third {
+        float: none;
+        margin: 3% auto;
+        width: 70%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1360px) {
+
+    .header {
+        flex-direction: column;
+    }
+  
+    .menu__list {
+        margin: 2% auto;
+    }
+  
+    .menu__item-link:hover {
+        border-bottom: none;
+    }
+  
+    .wrapper {
+        justify-content: center;
+        margin: 3%;
+    }
+
+    .wrapper__heading {
+        width: 50%;
+        margin: 0 auto;
+    }
+  
+    .form {
+        width: 50%;
+    }
+  
+    .reviews__item-first,
+    .reviews__item-second,
+    .reviews__item-third {
+        margin-right: 1%;
+        width: 29%;
+  }
+}

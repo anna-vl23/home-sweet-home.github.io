@@ -1,0 +1,258 @@
+@import url(reset.css);
+
+@import "variables.scss";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../img/background.jpg);
+}
+
+// header
+.header {
+    background-color: $color-third;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    color: $color-fifth;
+    text-shadow: 1px 1px 1px rgb(33, 33, 33);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header__img {
+    width: 10vmax;
+    height: 7vmax;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item-link {
+    padding: 1rem;
+    color: $color-fifth;
+    text-shadow: 1px 1px 1px rgb(33, 33, 33);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.menu__item-link:hover {
+    color: $color-second;
+    border-bottom: .2rem solid $color-second;
+    padding-bottom: .5rem;
+}
+
+.main {
+    /* outline: 1px solid black; */
+    background: url(../imgs/background.jpg);
+    padding: 2%;
+}
+
+.section {
+    /* outline: 1px solid pink; */
+    font-size: 1rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 3%;
+}
+
+.wrapper {
+    margin: 1%;
+    flex-basis: 35%;
+}
+
+.service__box,
+.subservice__box {
+    /* outline: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    box-shadow: .1rem .1rem .1rem .1rem rgb(38, 50, 56);
+    background: #fff;
+}
+
+.service__title,
+.subservice__title {
+    /* outline: 1px solid yellow; */
+    width: 100%;
+    padding: 3%;
+    background-color: #353535;
+    text-align: center;
+    text-transform: uppercase;
+    color: #bbb;
+}
+
+.service__list {
+    padding: 2%;
+}
+
+.service__item {
+    padding-left: 2rem;
+    background: url(../img/check.svg) .5rem no-repeat;
+    background-size: auto 1rem;
+    border-bottom: 0.006rem solid black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.service__price {
+    width: 100%;
+    padding: 3%;
+    background: rgb(253, 216, 53);
+    text-align: center;
+    font-weight: bold;
+    color: rgb(33, 33, 33);
+}
+
+.service__box-master {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.service__box-master div {
+    width: 50%;
+    padding: 1%;
+}
+
+.subservice__box {
+    text-align: center;
+}
+
+.subservice__img img {
+    height: 30vh;
+    padding: 5%;
+}
+
+.subservice__list {
+    padding: 3%;
+    font-weight: 600;
+}
+
+// footer
+.footer {
+    background-color: $color-third;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    width: 100%;
+
+    .footer__items {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2%;
+
+        .footer__items-link {
+        text-decoration: none;
+        color: $color-first;
+        font-size: 1rem;
+
+            .footer__items-img {
+            width: 50px;
+            height: 50px;
+            }
+        }
+        
+        .footer__items-text {
+        margin-left: 5%;
+        }
+
+        .footer__post-item {
+        font-size: 1rem;
+        }
+
+        .footer__items-post {
+        height: 50px;
+        width: 80px;
+        }
+    }
+
+    .map {
+        width: 90%;
+        height: 200px;
+        margin-left: 5%;
+        border: 5px solid $color-first;
+        border-radius: 7px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header  {
+        flex-direction: column;
+    }
+
+    .menu__list {
+        margin: 2% auto;
+    }
+
+    .menu__item-link:hover {
+        border-bottom: none;
+    }
+    
+    .section-service-individual,
+    .section-service-repair,
+    .section-subservice {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper {
+        width: 60%;
+        margin: 3% auto;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .menu__list {
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .menu__item {
+        margin: 1% 0;
+    }
+
+    .menu__item-link {
+        padding: 3% 0;
+    }
+
+    .menu__item-link:hover {
+        border-bottom: none;
+    }
+
+    .section-service-individual,
+    .section-service-repair,
+    .section-subservice {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper {
+        width: 80%;
+        margin: 3% auto;
+    }
+
+    .service__box-master .service__list {
+        flex-basis: 50%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
